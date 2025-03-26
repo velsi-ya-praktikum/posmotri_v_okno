@@ -50,21 +50,6 @@ form.onsubmit = (e) => {
 async function mainMechanics(endpoint) {
   try {
     const data = await (await fetch(endpoint)).json();
-
-    data.results[0]['city'] = 'Тбилиси';
-    data.results[0]['description'] =
-      'Вот, что видит кто-то из команды Практикума, когда не смотрит на код,\n' +
-      'а смотрит в окно.';
-
-    data.results[1]['city'] = 'Москва';
-    data.results[1]['description'] =
-      'Вот, что видит кто-то из команды Практикума, когда не смотрит на код,\n' +
-      'а смотрит в окно.';
-    data.results[2]['city'] = 'Орёл';
-    data.results[2]['description'] =
-      'Вот, что видит кто-то из команды Практикума, когда не смотрит на код,\n' +
-      'а смотрит в окно.';
-
     cardsOnPageState = data.results;
 
     if (!data?.results?.[0]) {
