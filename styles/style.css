@@ -217,6 +217,7 @@ ol {
 .content__video-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: end;
   padding: 2px 0 2px 2px;
   block-size: 107px;
 }
